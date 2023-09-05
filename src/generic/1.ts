@@ -5,13 +5,13 @@
    щоб вона повертала правильний тип.
 */
 
-function getPromise<T>() {
-  return new Promise<T>((resolve) => {
-    resolve(['Text', 50] as T);
+function getPromise () {
+  return new Promise((resolve) => {
+    resolve(['Text', 50]);
   });
 }
 
-getPromise<string[] | number[]>()
+getPromise ()
 .then((data) => {
   console.log(data);
 });
