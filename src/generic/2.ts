@@ -6,20 +6,40 @@
   Функція compare повинна повертати AllType.
 */
 
+// type AllType = {
+//   name: string;
+//   position: number;
+//   color: string;
+//   weight: number
+// }
+
+// function compare (top, bottom): AllType {
+//   return {
+//     name: top.name,
+//     color: top.color,
+//     position: bottom.position,
+//     weight: bottom.weight,
+//   }
+// }
+
+// export { };
+
 type AllType = {
   name: string;
   position: number;
   color: string;
-  weight: number
+  weight: number;
 }
 
-function compare (top, bottom): AllType {
+function compare<Top extends Partial<AllType>, Bottom extends Partial<AllType>>(
+  top: Top,
+  bottom: Bottom
+): AllType {
+  
   return {
-    name: top.name,
-    color: top.color,
-    position: bottom.position,
-    weight: bottom.weight,
-  }
+    name: top.name || "",
+    color: top.color || "",
+    position: bottom.position || 0,
+    weight: bottom.weight || 0,
+  };
 }
-
-export {};
