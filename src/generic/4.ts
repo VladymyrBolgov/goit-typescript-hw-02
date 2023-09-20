@@ -22,7 +22,7 @@ class Component<T extends ComponentProps> {
 }
 
 class Page extends Component<ComponentProps> {
-  pageInfo() {
+  pageInfo(): void {
     console.log(this.props.title);
   }
 }

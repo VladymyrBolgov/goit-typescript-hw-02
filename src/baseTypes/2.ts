@@ -4,7 +4,8 @@
 
 // export { };
 
-let anything: any[];
-anything = [-20, 'Text', {}]
+let anything: any = -20;
+anything = 'Text';
+anything = {};
 
 export { };
